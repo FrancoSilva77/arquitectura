@@ -1,0 +1,58 @@
+---
+import Navegacion from './Navegacion.astro';
+---
+
+<header class="header">
+  <Navegacion class="contenido-header" />
+
+  <div class="slogan contenedor">
+    <h1>Tu casa en el bosque</h1>
+    <p>Construimos la casa de tus sueños</p>
+  </div>
+</header>
+
+<style>
+  .header {
+    min-height: 60rem;
+    background-image: url(/img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+  }
+
+  .contenido-header {
+    display: flex;
+    flex-direction: column;
+    height: calc(60rem - 4rem);
+    justify-content: space-between;
+    color: var(--blanco);
+  }
+
+  .slogan {
+    color: var(--blanco);
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .slogan {
+      text-align: right;
+    }
+  }
+
+  .slogan h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    .slogan h1 {
+      font-size: 5rem;
+    }
+  }
+
+  .slogan p {
+    margin: 0;
+    line-height: 1;
+  }
+</style>

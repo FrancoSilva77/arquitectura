@@ -1,0 +1,32 @@
+---
+import Navegacion from './Navegacion.astro';
+---
+
+<footer class="footer mt-5">
+  <Navegacion />
+  <p class="copyright">Todos los derechos reservados &copy;</p>
+</footer>
+
+<style>
+  .footer {
+    height: 50rem;
+    background-image: url(/img/footer_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    color: var(--blanco);
+  }
+
+  .copyright {
+    background-color: var(--negro);
+    text-align: center;
+    margin: 5rem 0 0 0;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+</style>

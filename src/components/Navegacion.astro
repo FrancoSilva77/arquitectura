@@ -1,0 +1,147 @@
+---
+const { class: contenidoBarra } = Astro.props;
+---
+
+<div class={`contenedor ${contenidoBarra}`}>
+  <div class="barra">
+    <div class="logo">
+      <h1 class="nombre-sitio">Arquitectura<span>Bosque</span></h1>
+    </div>
+
+    <div class="contacto">
+      <a
+        class="telefono"
+        href="tel:2491719236"
+        >01-800-000-000</a
+      >
+
+      <nav class="navegacion">
+        <a
+          class="link"
+          href=""
+          >Inicio</a
+        >
+        <a
+          class="link"
+          href=""
+          >Nosotros</a
+        >
+        <a
+          class="link"
+          href=""
+          >Modelos</a
+        >
+        <a
+          class="link"
+          href=""
+          >Galeria</a
+        >
+        <a
+          class="link"
+          href=""
+          >Contacto</a
+        >
+      </nav>
+    </div>
+  </div>
+</div>
+
+<style>
+  .contenido-header {
+    display: flex;
+    flex-direction: column;
+    height: calc(60rem - 4rem);
+    justify-content: space-between;
+    color: var(--blanco);
+  }
+
+  .nombre-sitio {
+    font-weight: 300;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .nombre-sitio {
+      font-size: 5rem;
+    }
+  }
+
+  .nombre-sitio span {
+    font-weight: 900;
+  }
+
+  @media (min-width: 992px) {
+    .barra {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 992px) {
+    .contacto {
+      align-items: flex-end;
+    }
+  }
+
+  .telefono {
+    display: flex;
+    gap: 1rem;
+    color: var(--blanco);
+  }
+
+  .telefono::before {
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background-image: url(/img/telefono.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .link {
+    color: var(--blanco);
+    font-size: 2rem;
+  }
+
+  .navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 992px) {
+    .navegacion {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+
+  .navegacion a {
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (min-width: 992px) {
+    .navegacion a {
+      padding: 1rem 2rem;
+    }
+  }
+
+  .navegacion a:hover {
+    background-color: rgb(255 255 255 / 0.3);
+    color: var(--negro);
+  }
+</style>
